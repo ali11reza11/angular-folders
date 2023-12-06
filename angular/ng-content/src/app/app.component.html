@@ -1,0 +1,17 @@
+<app-users [user]="user"></app-users>
+
+<select>
+  <option *ngFor="let user of users">
+    name : {{user.name}} _ age : {{user.age}}
+  </option>
+</select>
+<br>
+<select>
+  <ng-container *ngFor="let user of users">
+    <ng-container *ngIf="user.age >= 17">
+      <option [ngValue]="user">
+        {{user.name}} ({{user.age}})
+      </option>
+    </ng-container>
+  </ng-container>
+</select>

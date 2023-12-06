@@ -1,0 +1,14 @@
+<div *ngIf="!isonedit">
+  <span>{{'user id : ' + user?.id }}</span><br>
+  <span>user name : </span>
+  <a [routerLink]="['./edit']" [queryParams]="{editmode : '1' , isadmin : '1'}" fragment="title1"
+    (click)="isonedit = true">{{user?.name}}</a><br>
+  <span>{{'user age : ' + user?.age}}</span><br>
+  <button class="btn btn-dark" (click)="onedituser()">click</button>
+  <input type="text" (input)="input($event)">
+  <p>{{pEl}}</p>
+</div>
+
+<div *ngIf="isonedit">
+  <router-outlet></router-outlet>
+</div>

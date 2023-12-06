@@ -1,0 +1,7 @@
+<div style="color: green;" *ngFor="let todo of donetasks$ | async">
+  first tab
+  {{todo.title}}
+</div>
+<div style="color: red;" *ngFor="let todo of undonetasks$ | async">
+  {{todo.title}}
+</div>

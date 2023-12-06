@@ -1,0 +1,19 @@
+<!-- attribute directive -->
+<p [class]="isCorrect ? 'big-font-size' : 'small-font-size'">testing</p>
+<p [style]="styles">testing</p>
+<p [class]="classes">testiing</p>
+<p [ngStyle]="styles">testiing</p>
+<p [ngClass]="classes">testiing</p>
+<!-- structural directive -->
+
+<!-- ng if -->
+<p *ngIf="isCorrect; else elsecond">testiing</p>
+<ng-template #elsecond>
+  <p [ngClass]="classes"> else condition</p>
+</ng-template>
+<br>
+<!-- ng for -->
+<p *ngFor="let user of users let i = index" [ngClass]="classes">{{i+1 + ' : ' + user }}</p>
+<hr>
+<p *ngFor="let user of usersObj ; ngForTrackBy : trackfunc">{{ user.id + " : " + user.name }}</p>
+<button (click)="adduser()">add user</button>

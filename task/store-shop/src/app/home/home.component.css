@@ -1,0 +1,29 @@
+
+
+.card{
+    height: 350px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-top{
+    width: 200px;
+    height: 200px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+img:hover{
+    transform: scale(1.1);
+}
+
+img {
+  transition: transform 0.3s ease-in-out;
+}

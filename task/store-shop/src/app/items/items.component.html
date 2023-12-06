@@ -1,0 +1,70 @@
+<!-- <div *ngIf="isitemfound ; else elsecond" style="display: flex; justify-content: center; ">
+  <div class="card" style="width: 100vh;">
+    <div style="display: flex; flex-direction: row;">
+      <img style="width: 100px; margin: 20px 20px 0;" class="card-img-top" src={{selectedItem?.image}}
+        alt="Card image cap">
+      <div class="star" style="display: flex; align-items: flex-start;">
+        <div>
+          <i style="color: gold;" class="fa fa-star"></i>
+          <i style="color: gold;" class="fa fa-star"></i>
+          <i style="color: gold;" class="fa fa-star"></i>
+          <i style="color: gold;" class="fa fa-star"></i>
+          <i style="color: gold;" class="fa fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{selectedItem?.category}}</h5>
+      <p class="card-text">{{selectedItem?.title}}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">price : {{selectedItem?.price}}</li>
+      <li class="list-group-item">{{selectedItem?.description}}</li>
+    </ul>
+    <div class="card-body">
+      <button class="btn btn-primary">add to cart</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #elsecond>
+  <p>item not found</p>
+</ng-template> -->
+
+<div *ngIf="isitemfound ; else elsecond" style="display: flex; justify-content: center; ">
+  <div class="card" style="width: 100vh;">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <img style="width: 100px; margin: 20px 20px 0;" class="card-img-top" src={{selectedItem?.image}}
+        alt="Card image cap">
+      <div class="crop" [style.width.px]=width style="margin-top: 30px; margin-right: 10px;">
+        <div style="width: 90px;">
+          <i style="color: gold;" class="fas fa-star"></i>
+          <i style="color: gold;" class="fas fa-star"></i>
+          <i style="color: gold;" class="fas fa-star"></i>
+          <i style="color: gold;" class="fas fa-star"></i>
+          <i style="color: gold;" class="fas fa-star"></i>
+        </div>
+        <p>{{ratenum}}</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{selectedItem?.category}}</h5>
+      <p class="card-text">{{selectedItem?.title}}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">price : {{selectedItem?.price}} <i class="fas fa-dollar"></i></li>
+      <li class="list-group-item">{{selectedItem?.description}}</li>
+    </ul>
+    <div class="card-body">
+      <button class="btn btn-primary" (click)="addtocart()">add to cart</button>
+    </div>
+  </div>
+</div>
+
+
+
+<ng-template #elsecond>
+  <p style="font-size: 2rem; display: flex; justify-content: center; width: 100%;">item not found</p>
+</ng-template>

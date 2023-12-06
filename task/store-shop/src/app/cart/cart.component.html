@@ -1,0 +1,32 @@
+<div class="card-table" *ngIf="items.length; else elsecondition">
+  <div class="cart-items">
+    <table class="table table-resposive">
+      <thead>
+        <tr>
+          <th> number </th>
+          <th> image </th>
+          <th> name </th>
+          <th> price </th>
+          <th> category
+          <th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items; let i = index">
+          <td> {{i + 1}} </td>
+          <td> <img style="width: 30px;" src={{item.image}} alt=""> </td>
+          <td> {{item.title}} </td>
+          <td> {{item.price}} <i class="fas fa-dollar"></i> </td>
+          <td> {{item.category}} </td>
+          <td> <button class="btn btn-primary" (click)="deleteItem(item)">delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<ng-template #elsecondition>
+  <div
+    style="font-size: 2rem; text-align: center; justify-content: center; display: flex; height: 100vh; width: 100%2;">
+    there is no items
+  </div>
+</ng-template>

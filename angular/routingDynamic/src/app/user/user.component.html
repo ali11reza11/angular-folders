@@ -1,0 +1,10 @@
+<div *ngIf="isUserFound; else elsecond">
+  <p>user id is :{{selectedUser?.id}} </p>
+  <p>user name is :{{selectedUser?.name}} </p>
+</div>
+
+<ng-template #elsecond>
+  <p>user not found!</p>
+</ng-template>
+<br>
+<button class="btn btn-dark" (click)="navigate()">back</button>

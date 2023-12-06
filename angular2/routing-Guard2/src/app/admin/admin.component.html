@@ -1,0 +1,25 @@
+<p>admin works!</p>
+
+<form action="">
+  <div>
+    <label>username</label>
+    <input #username type="text">
+  </div>
+  <div>
+    <label for="">password</label>
+    <input #password tylpe="text">
+  </div>
+  <button (click)="onuserloggedin(username.value , password.value , $event)">click</button>
+
+</form>
+<div style="font-size: 1rem;">
+  <ul>
+    <li>
+      <a [routerLink]="['manageusers']">manage users</a>
+    </li>
+    <li>
+      <a [routerLink]="['managepages']">manage pages</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

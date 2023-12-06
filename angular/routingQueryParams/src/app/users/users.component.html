@@ -1,0 +1,4 @@
+<div *ngFor="let user of users">
+  <span>{{'user id '+ user.id + ': '}}</span>
+  <a [routerLink]="['/user',  user.id]">{{user.name}}</a>
+</div>

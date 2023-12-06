@@ -1,0 +1,6 @@
+<div>
+  <label>{{user?.id}}</label>
+  <input #name type="text" [value]="user?.name">
+  <input #age type="text" [value]="user?.age">
+  <button class="btn btn-dark" (click)="saveschanges(name.value , +age.value)">save</button>
+</div>
